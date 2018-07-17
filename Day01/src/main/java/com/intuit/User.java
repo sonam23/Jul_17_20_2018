@@ -7,7 +7,8 @@ public class User {
 
 	public static void main(String[] args) {
 		
-		ApplicationContext context = new FileSystemXmlApplicationContext("classpath:beans.xml");
+		ApplicationContext context = 
+				new FileSystemXmlApplicationContext("classpath:beans.xml");
 		Door door = context.getBean("door",Door.class);
 		door.open();
 		door.close();
