@@ -1,7 +1,6 @@
 # Spring, Spring Boot, MicroServices
 
 
-* Company: **Intuit**
 * Location: **Bangalore**
 * Dates: **Jul 17 - 20**
 
