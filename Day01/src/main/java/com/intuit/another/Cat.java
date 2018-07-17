@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 public class Cat {
 	@Value("${catname}")
 	private String name;
+	
 //	public Cat(@Value("${catname}") String name) {
 //		this.name = name;
 //	}

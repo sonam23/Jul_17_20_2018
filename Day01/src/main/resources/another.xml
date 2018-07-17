@@ -7,8 +7,8 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.3.xsd">
 	
-	<util:properties id="props" location="classpath:animal.properties">
-	</util:properties>
+	<context:property-placeholder location="classpath:animal.properties"/>
+	<!-- <util:properties></util:properties> -->
 	
 	<util:list id="locations">
 		<value>Blore</value>
