@@ -1,0 +1,80 @@
+Spring
+	Season
+	Framework that makes your job easy
+	.NET Core(Entity Framework,WCF)
+
+class Account{
+	double balance;
+	deposit(amount){}
+	withdraw(amount){}
+	transferFund(to, amount){}
+}	
+
+//Readymade pool of Account objects
+//Transaction service
+//Security for withdraw and transferFund
+
+interface AccountHome extends Home{}
+interface AccountRemote extends Remote{}
+class AccountBean implements EntityBean{
+	//no constructors
+	//no static methods
+	//no final variables
+	//no inheritance
+	//don't throw unneccessary exception
+}
+ejb-jar.xml
+[bundle].jar ->\
+
+
+Lightweight container and API
+Dependency Injection
+
+ApplicationContext is the container
+	@Component uses the name of the class with the starting letter in Lowercase as the default name
+	INstantiates all the beans during startup itself
+	@Lazy lazy instantiation
+	Scope of all the beans are singleton by default
+	prototype or request or session
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
