@@ -1,4 +1,4 @@
-package com.intuit.lab01;
+package com.intuit.lab01withoutannot;
 
 import java.util.List;
 
@@ -6,11 +6,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
-@Component
 public class Conference {
-	@Autowired
 	private SessionPlanner sessionPlanner;
 	
+	
+	public void setSessionPlanner(SessionPlanner sessionPlanner) {
+		this.sessionPlanner = sessionPlanner;
+	}
+
 	public SessionPlanner getSessionPlanner() {
 		return sessionPlanner;
 	}

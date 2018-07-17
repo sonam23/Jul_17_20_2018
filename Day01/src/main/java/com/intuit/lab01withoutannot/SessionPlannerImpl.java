@@ -1,4 +1,4 @@
-package com.intuit.lab01;
+package com.intuit.lab01withoutannot;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,13 +11,19 @@ import javax.annotation.Resource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-//@Component
 public class SessionPlannerImpl implements SessionPlanner{
 
-	@Resource(name="sessions")
 	private Map<String, String> sessions;
 	
 	private List<String> _60MinTopics;
+	public Map<String, String> getSessions() {
+		return sessions;
+	}
+
+	public void setSessions(Map<String, String> sessions) {
+		this.sessions = sessions;
+	}
+
 	private List<String> _50MinTopics;
 	private List<String> _45MinTopics;
 

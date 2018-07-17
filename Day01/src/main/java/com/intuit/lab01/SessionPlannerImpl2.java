@@ -11,8 +11,8 @@ import javax.annotation.Resource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-//@Component
-public class SessionPlannerImpl implements SessionPlanner{
+@Component
+public class SessionPlannerImpl2 implements SessionPlanner{
 
 	@Resource(name="sessions")
 	private Map<String, String> sessions;
@@ -21,40 +21,32 @@ public class SessionPlannerImpl implements SessionPlanner{
 	private List<String> _50MinTopics;
 	private List<String> _45MinTopics;
 
+	@PostConstruct
+	public void constructTopics() {
+		_60MinTopics = new ArrayList<String>();
+		_50MinTopics = new ArrayList<String>();
+		_45MinTopics = new ArrayList<String>();
+		sessions.forEach((item,value) -> {
+			if(value.contains("60"))
+				_60MinTopics.add(item);
+			else if(value.contains("50"))
+				_50MinTopics.add(item);
+			else if(value.contains("45"))
+				_45MinTopics.add(item);
+		});
+	}
+	
 	
 	public List<String> get60MinTopics() {
-		if(_60MinTopics == null) {
-			_60MinTopics = constructTopics("60");
-		}
 		return _60MinTopics;
 	}
 	
 	public List<String> get50MinTopics() {
-		if(_50MinTopics == null) {
-			_50MinTopics = constructTopics("50");
-		}
 		return _50MinTopics;
 	}
 	
 	public List<String> get45MinTopics() {
-		if(_45MinTopics == null) {
-			_45MinTopics = constructTopics("45");
-		}
 		return _45MinTopics;
 	}
-
-	private List<String> constructTopics(String duration) {
-		List<String> topics = new ArrayList<String>();
-		sessions.forEach((item,value) -> {
-			if(value.contains(duration))
-				topics.add(item);
-		});
-		return topics;	
-	}
-
-	
-
-	
-
 
 }
