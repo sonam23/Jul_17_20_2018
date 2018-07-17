@@ -3,7 +3,7 @@
 
 * Company: **Intuit**
 * Location: **Bangalore**
-* Dates: **Jul 17 - 20*
+* Dates: **Jul 17 - 20**
 
 * *For People who love Coding*
 
