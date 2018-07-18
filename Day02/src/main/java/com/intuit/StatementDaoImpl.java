@@ -7,7 +7,8 @@ public class StatementDaoImpl extends BaseDaoSupport implements StatementDao
 {
 	public void addStatement(int accountNumber,String type,int amount)
 	{
-		String query = "insert into statements(account_number,type,amount) values(?,?,?)";
+		//INTENTIONALLY HAVE SYNTAX ERROR
+		String query = "inser into statements(account_number,type,amount) values(?,?,?)";
 		getJdbcTemplate().update(query,accountNumber,type,amount);
 	}
 }
